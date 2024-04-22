@@ -19,7 +19,7 @@ const BelowVideoFrame = ({ data, stats }) => {
   const truncatedChannelTitle = channelTitleWords?.slice(0, 1).join(" ");
 
   return (
-    <div className="flex ml-2 my-3 shadow-md py-2">
+    <div className="flex ml-2 my-3 shadow-md py-2 w-[1000px]">
       <div className="flex">
         <img
           className="w-12 h-12 rounded-full"

@@ -6,7 +6,7 @@ import { addMessage } from "../utils/chatSlice";
 import { generateRandomMessage, generateRandomName } from "../utils/helper";
 import { MdSend } from "react-icons/md";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
-
+import BelowLiveChat from "./BelowLiveChat";
 
 
 const LiveChat = () => {
@@ -18,16 +18,18 @@ const LiveChat = () => {
   const emojis = ["😊", "🤔", "🎉", "❤️", "😂", "😍", "👍", "👋"];
 
   const handleEmojiClick = (emoji) => {
-    setShowEmojiDropdown(!showEmojiDropdown)
+    setShowEmojiDropdown(!showEmojiDropdown);
     setMessage(message + emoji);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addMessage({
+    dispatch(
+      addMessage({
         name: "Me",
         text: message,
-    }))
+      })
+    );
     setMessage("");
   };
 
@@ -74,7 +76,7 @@ const LiveChat = () => {
             onClick={() => setShowEmojiDropdown(!showEmojiDropdown)}
             className="ml-2 p-2 rounded-full hover:bg-gray-200 focus:outline-none"
           >
-            <MdOutlineEmojiEmotions className="w-7 h-7"/>
+            <MdOutlineEmojiEmotions className="w-7 h-7" />
           </button>
           {showEmojiDropdown && (
             <div className="absolute bottom-full left-0 bg-white border border-gray-300 rounded-lg p-2 shadow-md z-10">
@@ -94,9 +96,12 @@ const LiveChat = () => {
           type="submit"
           className="ml-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-black focus:outline-none"
         >
-          <MdSend/>
+          <MdSend />
         </button>
       </form>
+      
+      <BelowLiveChat/>
+      
     </>
   );
 };
