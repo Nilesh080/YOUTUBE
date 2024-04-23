@@ -11,7 +11,7 @@ const Description = ({ publishedAt, description }) => {
   const truncatedDescription = `${description?.substring(0, 200)}...`;
 
   return (
-    <div className="bg-gray-100 rounded-lg shadow-md p-4 mb-4 w-[1100px]">
+    <div className="bg-gray-100 rounded-lg shadow-md p-4 mb-4 w-[950px]">
       <div className="flex items-center mb-2">
         <h2 className="text-lg font-semibold mr-2">Description</h2>
         <span className="text-gray-500">Published on {publishedDate}</span>

@@ -16,7 +16,7 @@ const BelowVideoFrame = ({ data, stats }) => {
   const truncatedChannelTitle = channelTitleWords?.slice(0, 1).join(" ");
 
   return (
-    <div className="flex ml-2 my-3 shadow-md py-2 w-[1000px]">
+    <div className="flex ml-2 my-3 shadow-md py-2 w-[900px]">
       <div className="flex">
         <img
           className="w-12 h-12 rounded-full"
@@ -25,7 +25,7 @@ const BelowVideoFrame = ({ data, stats }) => {
         />
         <div className="flex flex-col ml-3 ">
           <div className="flex">
-            <p className="text-lg font-semibold">{truncatedChannelTitle}</p>
+            <p className="text-md font-semibold">{truncatedChannelTitle}</p>
             <MdVerified className="mt-2 ml-1" />
           </div>
           <div className="flex">
@@ -41,13 +41,13 @@ const BelowVideoFrame = ({ data, stats }) => {
         </div>
         <button
           onClick={() => setsubscribed(!subscribed)}
-          className="ml-11 bg-black hover:bg-gray-800 text-white font-bold h-12 px-4 rounded-full"
+          className="ml-11 bg-black hover:bg-gray-800 text-white h-12 px-4 rounded-full"
         >
           {subscribed === true ? "Subscribed" : "Subscribe"}
         </button>
       </div>
 
-      <div className="flex ml-64 space-x-3">
+      <div className="flex ml-[9rem] space-x-3">
         <div className="flex">
           <button
             onClick={() => setlike(!like)}

@@ -39,7 +39,7 @@ const WatchPage = () => {
         <div className="px-2">
           <iframe
             className="rounded-lg"
-            width="1100"
+            width="950"
             height="550"
             src={
               "https://www.youtube.com/embed/" +
@@ -59,7 +59,7 @@ const WatchPage = () => {
       </div>
 
       {data && (
-        <p className={`font-bold text-2xl px-2 py-1 ${isMenuOpen ? 'mt-[10px] ': 'mt-[-5280px]'}`}>{data?.title}</p>
+        <p className={`font-bold text-xl px-2 py-1 ${isMenuOpen ? 'mt-[10px] ': 'mt-[-5280px]'}`}>{data?.title}</p>
       )}
       <BelowVideoFrame data={data} stats={stats} />
       <div className="">

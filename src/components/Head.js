@@ -89,7 +89,7 @@ const Head = () => {
         />
         {search !== "" && (
           <div
-            className="absolute ml-[37rem] cursor-pointer"
+            className="absolute ml-[33rem] cursor-pointer"
             onClick={() => setSearch("")}
           >
             <RxCross1 className="w-6 h-6" />
