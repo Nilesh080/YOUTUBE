@@ -11,7 +11,7 @@ const VideoCard = ({ info }) => {
       <img
         className="rounded-lg w-full"
         src={thumbnails.medium.url}
-        alt="video image"
+        alt=""
       />
       <ul>
         <li className="pt-1 font-bold">{title}</li>
@@ -25,7 +25,7 @@ const VideoCard = ({ info }) => {
       <img
         className="rounded-lg w-full"
         src={thumbnails.medium.url}
-        alt="video image"
+        alt=""
       />
       <ul>
         <li className="pt-1 font-bold">{title}</li>

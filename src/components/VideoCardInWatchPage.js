@@ -26,7 +26,7 @@ const VideoCardInWatchPage = ({ info }) => {
         <img
           className="rounded-lg w-[168px] h-[94px]"
           src={thumbnails.medium.url}
-          alt="video image"
+          alt=""
         />
       </div>
       <div className="w-7/12">

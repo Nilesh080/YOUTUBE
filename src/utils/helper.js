@@ -229,7 +229,6 @@ export const messages = [
   "I'm feeling inspired today. 💡",
 ];
 
-var finalName = "";
 
 export function generateRandomName() {
   return nameList[Math.floor(Math.random() * nameList.length)];

@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
-import { GOOGLE_API_KEY } from "../utils/constants";
+import React, { useState } from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiFillLike } from "react-icons/ai";
 import { IoIosShareAlt } from "react-icons/io";
