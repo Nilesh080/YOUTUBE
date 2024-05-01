@@ -59,7 +59,7 @@ const WatchPage = () => {
       </div>
 
       {data && (
-        <p className={`font-bold text-xl px-2 py-1 ${isMenuOpen ? 'mt-[10px] ': 'mt-[-5275px]'}`}>{data?.title}</p>
+        <p className={`font-bold text-xl px-2 py-1 ${isMenuOpen ? 'mt-[10px] ': 'mt-[-5344px]'}`}>{data?.title}</p>
       )}
       <BelowVideoFrame data={data} stats={stats} />
       <div className="">
