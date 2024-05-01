@@ -15,7 +15,7 @@ const WatchPage = () => {
   console.log(searchParams.get("v"));
   const dispatch = useDispatch();
   const isMenuOpen = useSelector((store) => store?.menuSlice?.isMenuOpen);
-  
+
   useEffect(() => {
     const getVideos = async () => {
       const data = await fetch(
@@ -31,10 +31,8 @@ const WatchPage = () => {
     getVideos();
   }, [dispatch, searchParams]);
 
-  
-
   return (
-    <div className="ml-10 w-[1000px]">
+    <div className="ml-10 w-[1000px] flex flex-col relative">
       <div className="flex">
         <div className="px-2">
           <iframe
@@ -58,18 +56,19 @@ const WatchPage = () => {
         )}
       </div>
 
-      {data && (
-        <p className={`font-bold text-xl px-2 py-1 ${isMenuOpen ? 'mt-[10px] ': 'mt-[-5344px]'}`}>{data?.title}</p>
-      )}
-      <BelowVideoFrame data={data} stats={stats} />
-      <div className="">
+      <div className="absolute top-[550px] left-0">
+        {data && (
+          <div>
+            <p className={`font-bold text-xl px-2 py-2`}>{data?.title}</p>
+          </div>
+        )}
+        <BelowVideoFrame data={data} stats={stats} />
         <Description
           publishedAt={data?.publishedAt}
           description={data?.description}
         />
+        <CommentsContainer commentCount={stats?.commentCount} />
       </div>
-
-      <CommentsContainer commentCount={stats?.commentCount} />
     </div>
   );
 };
